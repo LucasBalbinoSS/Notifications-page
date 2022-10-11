@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+:root {
+    --notf-red: #f65351;
+    --notf-primary-blue: #0a317b;
+
+    --notf-very-light-blue: #f7fafd;
+    --notf-light-blue-one: #e5effa;
+    --notf-light-blue-two: #dde7ee;
+
+    --notf-blue: #939dae;
+    --notf-dark-blue: #5e6778;
+    --notf-very-dark-blue: #1c202b;
+}
+
+
+/* general styling */
+.notf-container {
+    background-color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    max-width: 560px;
+    padding-block: 20px;
+    padding-inline: 15px;
+    border-radius: 4px;
+}
+
+
+/* first container styling */
+.notf-container-frst {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h1 {
+    font-size: 18px;
+    color: var(--notf-very-dark-blue);
+
+    position: relative;
+}
+
+h1 span {
+    color: #fff;
+    background-color: var(--notf-primary-blue);
+    font-size: 12px;
+    padding-inline: 7px;
+    padding-block-start: 1px;
+    padding-block-end: 2px;
+    border-radius: 4px;
+
+    position: absolute;
+    right: -28px;
+    bottom: 2px;
+}
+
+.mark-all {
+    color: var(--notf-dark-blue);
+    font-size: 12px;
+    cursor: pointer;
+
+    transition: color ease-in-out 150ms;
+}
+
+.mark-all:hover {
+    text-decoration: underline;
+}
+
+.mark-all-as-read:hover {
+    color: var(--notf-primary-blue);
+}
+
+.mark-all-as-unread {
+    display: none;
+    opacity: .5;
+
+    transition: opacity ease-in-out 150ms;
+}
+
+.mark-all-as-unread:hover {
+    opacity: .8;
+}
+
+
+/* second container styling */
+.notf-container-scnd {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.notf-block {
+    display: flex;
+    gap: 10px;
+
+    font-size: 12px;
+    color: var(--notf-dark-blue);
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.notf-block:hover {
+    background-color: rgba(211, 211, 211, 0.144);
+}
+
+.notf-block:nth-of-type(4) {
+    padding-block-end: 25px;
+}
+
+.notf-block:nth-of-type(5) {
+    justify-content: space-between;
+    padding-block-end: 25px;
+}
+
+.notf-block:nth-of-type(5) .notf-block-kimberly {
+    display: flex;
+    gap: 10px;
+}
+
+.person-photo {
+    width: 35px;
+    cursor: pointer;
+}
+
+.notf-block-internal {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.person-name {
+    color: var(--notf-very-dark-blue);
+    font-weight: 800;
+
+    transition: color ease-in-out 100ms;
+}
+
+.person-name:hover {
+    color: var(--notf-primary-blue);
+}
+
+.post-time {
+    color: var(--notf-blue);
+    font-size: 11px;
+}
+
+.person-myphoto {
+    width: 28px;
+    border-radius: 4px;
+}
+
+.person-myphoto:hover {
+    outline: 1px solid var(--notf-light-blue-two);
+    outline-offset: 3px;
+}
+
+.post-name {
+    font-weight: 800;
+    cursor: pointer;
+
+    transition: color ease-in-out 100ms;
+}
+
+.post-name:hover {
+    color: var(--notf-primary-blue);
+}
+
+.chess-club {
+    font-weight: 800;
+    color: var(--notf-primary-blue);
+    cursor: pointer;
+}
+
+p {
+    border: 1px solid #d3d3d391;
+    border-radius: 4px;
+    padding: 12px;
+
+    transition: background-color ease-in-out 170ms;
+}
+
+p:hover {
+    background-color: var(--notf-light-blue-one);
+    border-color: transparent;
+}
+
+
+/* unread messages */
+.notf-block-unread {
+    background-color: var(--notf-very-light-blue);
+    border-radius: 4px;
+
+    position: relative;
+}
+
+.notf-block-unread:hover {
+    background-color: #e5effa7e;
+}
+
+.notf-block-unread:after {
+    background-color: var(--notf-red);
+    content: '';
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    display: block;
+
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+
+/* media queries */
+@media (min-width: 400px) {
+    body {
+        padding-block: 2%;
+        
+        display: flex;
+        justify-content: center;
+    }
+    
+    .person-myphoto {
+        width: 38px;
+    }
+}
+
+@media (min-width: 650px) {
+    body {
+        background-color: var(--notf-very-light-blue);
+    }
+
+    .notf-container {
+        padding-inline: 25px;
+
+        filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h1 span {
+        bottom: 3px;
+    }
+
+    .notf-block, .mark-all {
+        font-size: 13px;
+    }
+
+    .notf-block-unread:after {
+        width: 9px;
+        height: 9px;
+    }
+}
