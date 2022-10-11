@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frontend Mentor | Notifications page</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap" rel="stylesheet">
+
+  <!-- Stylization -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <section class="notf-container">
+    <div class="notf-container-frst">
+      <h1>Notifications <span id="js-notf-number"></span></h1>
+      <span class="mark-all mark-all-as-read" id="js-mark-all-as-read">Mark all as read</span>
+      <span class="mark-all mark-all-as-unread" id="js-mark-all-as-unread">Mark all as unread</span>
+    </div>
+
+    <div class="notf-container-scnd">
+      <div class="notf-block notf-block-unread">
+        <figure>
+          <img class="person-photo" src="../assets/images/avatar-mark-webber.webp" alt="photo of mark webber">
+        </figure>
+        <div class="notf-block-internal">
+          <span><span class="person-name">Mark Webber</span> reacted to your recent post <span class="post-name">My first tournament today! <span class="notf-red-marker"></span></span></span>
+          <span class="post-time">1m ago</span>
+        </div>
+      </div>
+      <div class="notf-block notf-block-unread">
+        <figure>
+          <img class="person-photo" src="../assets/images/avatar-angela-gray.webp" alt="photo of angela gray">
+        </figure>
+        <div class="notf-block-internal">
+          <span><span class="person-name">Angela Gray</span> followed you <span class="notf-red-marker"></span></span>
+          <span class="post-time">5m ago</span>
+        </div>
+      </div>
+      <div class="notf-block notf-block-unread">
+        <figure>
+          <img class="person-photo" src="../assets/images/avatar-jacob-thompson.webp" alt="photo of jacob thompson">
+        </figure>
+        <div class="notf-block-internal">
+          <span><span class="person-name">Jacob Thompson</span> has joined your group <span class="chess-club">Chess Club <span class="notf-red-marker"></span></span></span>
+          <span class="post-time">1 day ago</span>
+        </div>
+      </div>
+      <div class="notf-block">
+        <figure>
+          <img class="person-photo" src="../assets/images/avatar-rizky-hasanuddin.webp" alt="photo of rizky hasanuddin">
+        </figure>
+        <div class="notf-block-internal">
+          <span><span class="person-name">Rizky Hasanuddin</span> sent you a private message</span>
+          <span class="post-time">5 days ago</span>
+          <p>
+            Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and
+            I'm already having lots of fun and improving my game.
+          </p>
+        </div>
+      </div>
+      <div class="notf-block">
+        <div class="notf-block-kimberly">
+          <figure>
+            <img class="person-photo" src="../assets/images/avatar-kimberly-smith.webp" alt="photo of kimberly smith">
+          </figure>
+          <div class="notf-block-internal">
+            <span><span class="person-name">Kimberly Smith</span> commented on your picture</span>
+            <span class="post-time">1 week ago</span>
+          </div>
+        </div>
+        <figure>
+          <img class="person-myphoto" src="../assets/images/myphoto.jpg" alt="myphoto">
+        </figure>
+      </div>
+      <div class="notf-block">
+        <figure>
+          <img class="person-photo" src="../assets/images/avatar-nathan-peterson.webp" alt="photo of nathan peterson">
+        </figure>
+        <div class="notf-block-internal">
+          <span><span class="person-name">Nathan Peterson</span> reacted to your recent post <span class="post-name">5 end-game strategies to increase your win rate</span></span>
+          <span class="post-time">2 weeks ago</span>
+        </div>
+      </div>
+      <div class="notf-block">
+        <figure>
+          <img class="person-photo" src="../assets/images/avatar-anna-kim.webp" alt="photo of anna kim">
+        </figure>
+        <div class="notf-block-internal">
+          <span><span class="person-name">Anna Kim</span> left the group <span class="chess-club">Chess Club</span></span>
+          <span class="post-time">2 weeks ago</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/index.js"></script>
+
+</body>
+</html>
