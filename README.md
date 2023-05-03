@@ -1,4 +1,5 @@
 # Notifications-page
+👉 [Click here to see the project](https://lucasbalbinoss.github.io/Notifications-page/notifications-page/src/index.html) <br>
 The notifications page is a JavaScript training project.📚
 
 On that notifications page the user can:
